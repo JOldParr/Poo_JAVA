@@ -7,6 +7,7 @@ package juegoahorcado;
 
 import Entidad.Ahorcado;
 import Servicios.ServiciosAhorcado;
+import java.util.Scanner;
 
 /**
  *
@@ -19,9 +20,17 @@ public class JuegoAhorcado {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner leerMain = new Scanner(System.in);
+        
         Ahorcado a = new Ahorcado();
         ServiciosAhorcado sa = new ServiciosAhorcado();
-        sa.crearJuego();
+        
+        System.out.println("Vamos a jugar ahorcado: ");
+        sa.crearJuego(a);
+        sa.longitud(a);
+        sa.buscar(a);
+        
+        
     }
     
 }

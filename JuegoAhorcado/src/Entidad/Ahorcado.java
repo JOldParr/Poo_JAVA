@@ -13,14 +13,16 @@ public class Ahorcado {
     private String[] palabra;
     private int letrasEncontradas;
     private int jugadasMaximas;
-
+    private String[] palabraEscondida;
+    
     public Ahorcado() {
     }
 
-    public Ahorcado(String[] palabra, int letrasEncontradas, int jugadasMaximas) {
+    public Ahorcado(String[] palabra, int letrasEncontradas, int jugadasMaximas, String[] palabraEscondida) {
         this.palabra = palabra;
         this.letrasEncontradas = letrasEncontradas;
         this.jugadasMaximas = jugadasMaximas;
+        this.palabraEscondida = palabraEscondida;
     }
 
     public String[] getPalabra() {
@@ -46,6 +48,20 @@ public class Ahorcado {
     public void setJugadasMaximas(int jugadasMaximas) {
         this.jugadasMaximas = jugadasMaximas;
     }
+
+    public String[] getPalabraEscondida() {
+        return palabraEscondida;
+    }
+
+    public void setPalabraEscondida(String[] palabraEscondida) {
+        this.palabraEscondida = palabraEscondida;
+    }
+
+    @Override
+    public String toString() {
+        return "Ahorcado{" + "palabraEscondida=" + palabraEscondida + '}';
+    }
+    
     
     
 }
